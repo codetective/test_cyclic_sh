@@ -10,7 +10,6 @@ async function bootstrap() {
     await sequelize.authenticate();
     console.log('db connected');
     await sequelize.sync({});
-
     await app.listen(3000);
   } catch (err) {
     console.log('Failed to connect to the database:', err);
